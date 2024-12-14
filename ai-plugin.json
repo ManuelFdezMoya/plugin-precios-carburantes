@@ -1,0 +1,15 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "Carburantes Info",
+  "name_for_model": "carburantes_info",
+  "description_for_human": "Consulta precios de carburantes en estaciones de servicio de España.",
+  "description_for_model": "Accede a información de estaciones de servicio y precios de carburantes.",
+  "api": {
+    "type": "rest",
+    "url": "https://sedeaplicaciones.minetur.gob.es/ServiciosRESTCarburantes/PreciosCarburantes/EstacionesTerrestres/",
+    "is_user_authenticated": false
+  },
+  "auth": {
+    "type": "none"
+  }
+}
