@@ -1,0 +1,33 @@
+openapi: 3.0.1
+info:
+  title: "API de Precios de Carburantes"
+  description: "Consulta precios y detalles de estaciones de servicio en España."
+  version: "1.0.0"
+servers:
+  - url: "https://sedeaplicaciones.minetur.gob.es/ServiciosRESTCarburantes/"
+paths:
+  /PreciosCarburantes/EstacionesTerrestres/:
+    get:
+      summary: "Obtener datos de estaciones de servicio"
+      description: "Devuelve una lista de estaciones de servicio con información detallada."
+      responses:
+        '200':
+          description: "Éxito"
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  ListaEESSPrecio:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        Rótulo:
+                          type: string
+                        Dirección:
+                          type: string
+                        Precio_Gasolina_95_E5:
+                          type: string
+                        Municipio:
+                          type: string
